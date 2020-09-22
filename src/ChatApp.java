@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class ChatApp extends Application {
-	private boolean isServer = false;
+	private boolean isServer = true; //if you want to open the client chat change "true" for "false" and vice versa
 	
 	private TextArea messages = new TextArea();
 	private Network connection = isServer ? createServer() : createClient();
