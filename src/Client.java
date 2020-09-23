@@ -1,6 +1,10 @@
 import java.io.Serializable;
 import java.util.function.Consumer;
-
+/**
+ * Class client for comunicate with the server
+ * @author Gustavo
+ *
+ */
 public class Client extends Network{
 	private String ip;
 	private int port;

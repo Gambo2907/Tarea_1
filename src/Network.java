@@ -4,11 +4,18 @@ import java.io.Serializable;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.function.Consumer;
-
+/**
+ * What this class basically does is create a connection bridge between the server and the client .
+ * @author Gustavo
+ *
+ */
 public abstract class Network {
 	private ConnectionThread connThread = new ConnectionThread();
 	private Consumer<Serializable> onRecieveCallback;
-	
+/**
+ * New object Network with serializable data for convert objects in bytes.
+ * @param onRecieveCallback
+ */
 	public Network(Consumer<Serializable> onRecieveCallback) {
 		this.onRecieveCallback = onRecieveCallback;
 		connThread.setDaemon(true);
